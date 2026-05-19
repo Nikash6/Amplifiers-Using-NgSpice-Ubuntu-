@@ -19,21 +19,21 @@ Learning Outcomes
 
 Through this project:
 
-Understood BJT amplifier configurations
-Learned transistor biasing
-Practiced SPICE simulation workflow
-Observed amplifier waveforms
-Studied phase relationships between input and output
+Understood BJT amplifier configurations,
+Learned transistor biasing,
+Practiced SPICE simulation workflow,
+Observed amplifier waveforms,
+Studied phase relationships between input and output,
 Future Improvements
 
 Possible future additions:
 
-AC Sweep analysis
-Bode plots
-Gain measurement
-MOSFET amplifiers
-Differential amplifiers
-Sky130 PDK integration
+AC Sweep analysis,
+Bode plots,
+Gain measurement,
+MOSFET amplifiers,
+Differential amplifiers,
+Sky130 PDK integration.
 References
 Sedra & Smith — Microelectronic Circuits
 Boylestad — Electronic Devices and Circuit Theory
