@@ -1,0 +1,40 @@
+***CE Amplifier Design Using NgSpice***
+
+
+Step 1:Create File
+Open terminal: type command below 
+nano ce_amp.cir
+
+Step 2:In GNU Dashboard Paste below Script
+* Common Emitter Amplifier
+
+VCC vcc 0 DC 12
+VIN in 0 SIN(0 0.01 1k)
+
+R1 vcc base 100k
+R2 base 0 22k
+
+RC vcc collector 4.7k
+RE emitter 0 1k
+
+CIN in base 10u
+COUT collector out 10u
+CE emitter 0 100u
+
+Q1 collector base emitter 2N3904
+
+.model 2N3904 NPN(IS=6.734E-15 BF=255.9)
+
+.tran 0.1ms 10ms
+.control
+run
+plot v(in) v(out)
+.endc
+
+.end
+
+Step 3:Run Simulation
+ngspice ce_amp.cir
+
+You can observe waveform and OutPut in Terminal.
+
