@@ -1,0 +1,39 @@
+***CC Amplifier Design Using NgSpice***
+
+
+Step 1:Create File
+Open terminal: type command below 
+nano cc_amp.cir
+
+Step 2:In GNU Dashboard Paste below Script
+
+* Common Collector Amplifier
+
+VCC vcc 0 DC 12
+VIN in 0 SIN(0 0.1 1k)
+
+R1 vcc base 100k
+R2 base 0 47k
+
+RE emitter 0 1k
+
+CIN in base 10u
+COUT emitter out 10u
+
+Q1 vcc base emitter 2N3904
+
+.model 2N3904 NPN(IS=6.734E-15 BF=255.9)
+
+.tran 0.1ms 10ms
+
+.control
+run
+plot v(in) v(out)
+.endc
+
+.end
+
+Step 3:Run Simulation
+ngspice cc_amp.cir
+
+You can observe waveform and OutPut in Terminal.
